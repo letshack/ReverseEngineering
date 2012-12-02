@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_keRa4cqAEd6T2oCYaGnFEw" name="AspectJ" metaclassReference="_sm05kMqEEd6T2oCYaGnFEw _sm1goMqEEd6T2oCYaGnFEw _sm1gocqEEd6T2oCYaGnFEw _sm1gosqEEd6T2oCYaGnFEw _sm1go8qEEd6T2oCYaGnFEw">
+  <eAnnotations xmi:id="_Is21cMtcEd6MibUdgAxx6A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_94Vj4OINEd63wL3ESafAKg" name="AspectJ" nsURI="http:///schemas/AspectJ/_94QrYOINEd63wL3ESafAKg/2" nsPrefix="AspectJ">
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_94WK8OINEd63wL3ESafAKg" name="AdviceExecutionType">
+        <eAnnotations xmi:id="_94WK8eINEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_A0N8wMqBEd6T2oCYaGnFEw"/>
+        <eLiterals xmi:id="_94WK8uINEd63wL3ESafAKg" name="AroundAdvice"/>
+        <eLiterals xmi:id="_94WK8-INEd63wL3ESafAKg" name="BeforeAdvice" value="1"/>
+        <eLiterals xmi:id="_94WK9OINEd63wL3ESafAKg" name="AfterAdvice" value="2"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_94WK9eINEd63wL3ESafAKg" name="PointCutCompositionType">
+        <eAnnotations xmi:id="_94WK9uINEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_POvFkMqBEd6T2oCYaGnFEw"/>
+        <eLiterals xmi:id="_94WK9-INEd63wL3ESafAKg" name="And"/>
+        <eLiterals xmi:id="_94WK-OINEd63wL3ESafAKg" name="Or" value="1"/>
+        <eLiterals xmi:id="_94WK-eINEd63wL3ESafAKg" name="Not" value="2"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EEnum" xmi:id="_94WK-uINEd63wL3ESafAKg" name="AspectInstantiationType">
+        <eAnnotations xmi:id="_94WK--INEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_LPKmwMqDEd6T2oCYaGnFEw"/>
+        <eLiterals xmi:id="_94WK_OINEd63wL3ESafAKg" name="perthis"/>
+        <eLiterals xmi:id="_94WK_eINEd63wL3ESafAKg" name="pertarget" value="1"/>
+        <eLiterals xmi:id="_94WK_uINEd63wL3ESafAKg" name="percflow" value="2"/>
+        <eLiterals xmi:id="_94WK_-INEd63wL3ESafAKg" name="percflowbelow" value="3"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_94WLAOINEd63wL3ESafAKg" name="Aspect">
+        <eAnnotations xmi:id="_94WLAeINEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eQ7ngMqDEd6T2oCYaGnFEw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLAuINEd63wL3ESafAKg" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_94WLBOINEd63wL3ESafAKg" name="isPrivileged" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_94WLBuINEd63wL3ESafAKg" name="perType" ordered="false" upperBound="-1" eType="_94WK-uINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLCOINEd63wL3ESafAKg" name="perPointCut" ordered="false" eType="_94WLEuINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLCuINEd63wL3ESafAKg" name="declaredParents" ordered="false" upperBound="-1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Generalization"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLDOINEd63wL3ESafAKg" name="declaredImplements" ordered="false" upperBound="-1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//InterfaceRealization"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLDuINEd63wL3ESafAKg" name="precededBy" ordered="false" eType="_94WLAOINEd63wL3ESafAKg" eOpposite="_94WLEOINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLEOINEd63wL3ESafAKg" name="precedes" ordered="false" eType="_94WLAOINEd63wL3ESafAKg" eOpposite="_94WLDuINEd63wL3ESafAKg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_94WLEuINEd63wL3ESafAKg" name="PointCut">
+        <eAnnotations xmi:id="_94WLE-INEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_MjFTcMqIEd6T2oCYaGnFEw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLFOINEd63wL3ESafAKg" name="base_StructuralFeature" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//StructuralFeature"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLFuINEd63wL3ESafAKg" name="composite" ordered="false" upperBound="-1" eType="_94WLGuINEd63wL3ESafAKg" eOpposite="_94WLIuINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLGOINEd63wL3ESafAKg" name="advice" ordered="false" upperBound="-1" eType="_94WLJeINEd63wL3ESafAKg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_94WLGuINEd63wL3ESafAKg" name="CompositePointCut" eSuperTypes="_94WLEuINEd63wL3ESafAKg">
+        <eAnnotations xmi:id="_94WLG-INEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_tcZzEMr6Ed6WjYvlwxWqyA"/>
+        <eAnnotations xmi:id="_94WLHOINEd63wL3ESafAKg" source="duplicates">
+          <contents xmi:type="ecore:EReference" xmi:id="_94WLHeINEd63wL3ESafAKg" name="base_StructuralFeature" ordered="false" lowerBound="1">
+            <eAnnotations xmi:id="_94WLHuINEd63wL3ESafAKg" source="redefines" references="_94WLFOINEd63wL3ESafAKg"/>
+            <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//StructuralFeature"/>
+          </contents>
+        </eAnnotations>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_94WLIOINEd63wL3ESafAKg" name="compositionType" ordered="false" lowerBound="1" eType="_94WK9eINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLIuINEd63wL3ESafAKg" name="composee" ordered="false" upperBound="-1" eType="_94WLEuINEd63wL3ESafAKg" eOpposite="_94WLFuINEd63wL3ESafAKg"/>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_94WLJeINEd63wL3ESafAKg" name="Advice">
+        <eAnnotations xmi:id="_94WLJuINEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_jcTw4MsrEd60_JOI_azNeQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLJ-INEd63wL3ESafAKg" name="base_BehavioralFeature" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//BehavioralFeature"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_94WLKeINEd63wL3ESafAKg" name="adviceExecution" ordered="false" lowerBound="1" eType="_94WK8OINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLK-INEd63wL3ESafAKg" name="pointCut" ordered="false" lowerBound="1" eType="_94WLEuINEd63wL3ESafAKg"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLLeINEd63wL3ESafAKg" name="advisedElement" ordered="false" upperBound="-1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//NamedElement"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_94WLL-INEd63wL3ESafAKg" name="StaticCrossCuttingFeature">
+        <eAnnotations xmi:id="_94WLMOINEd63wL3ESafAKg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_AMN1oMtSEd60_JOI_azNeQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLMeINEd63wL3ESafAKg" name="base_Feature" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Feature"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_94WLM-INEd63wL3ESafAKg" name="onType" ordered="false" lowerBound="1" upperBound="-1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/3.0.0/UML#//Type"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:id="_sm05kMqEEd6T2oCYaGnFEw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <elementImport xmi:id="_sm1goMqEEd6T2oCYaGnFEw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeature"/>
+  </elementImport>
+  <elementImport xmi:id="_sm1gocqEEd6T2oCYaGnFEw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Feature"/>
+  </elementImport>
+  <elementImport xmi:id="_sm1gosqEEd6T2oCYaGnFEw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#BehavioralFeature"/>
+  </elementImport>
+  <elementImport xmi:id="_sm1go8qEEd6T2oCYaGnFEw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Package"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_A0N8wMqBEd6T2oCYaGnFEw" name="AdviceExecutionType">
+    <ownedLiteral xmi:id="_Fg8KkMqBEd6T2oCYaGnFEw" name="AroundAdvice"/>
+    <ownedLiteral xmi:id="_H75xIMqBEd6T2oCYaGnFEw" name="BeforeAdvice"/>
+    <ownedLiteral xmi:id="_J1S7sMqBEd6T2oCYaGnFEw" name="AfterAdvice"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_POvFkMqBEd6T2oCYaGnFEw" name="PointCutCompositionType">
+    <ownedLiteral xmi:id="_Rj_FsMqBEd6T2oCYaGnFEw" name="And"/>
+    <ownedLiteral xmi:id="_S4urEMqBEd6T2oCYaGnFEw" name="Or"/>
+    <ownedLiteral xmi:id="_Uhh04MqBEd6T2oCYaGnFEw" name="Not"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_LPKmwMqDEd6T2oCYaGnFEw" name="AspectInstantiationType">
+    <ownedLiteral xmi:id="_PcydwMqDEd6T2oCYaGnFEw" name="perthis"/>
+    <ownedLiteral xmi:id="_QyUGQMqDEd6T2oCYaGnFEw" name="pertarget"/>
+    <ownedLiteral xmi:id="_R7ps4MqDEd6T2oCYaGnFEw" name="percflow"/>
+    <ownedLiteral xmi:id="_S0hOkMqDEd6T2oCYaGnFEw" name="percflowbelow"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_eQ7ngMqDEd6T2oCYaGnFEw" name="Aspect">
+    <ownedAttribute xmi:id="_R5EWIMqHEd6T2oCYaGnFEw" name="base_Class" association="_R5DvEMqHEd6T2oCYaGnFEw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Type"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_eLi0YMqHEd6T2oCYaGnFEw" name="isPrivileged" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_APWQ8MqIEd6T2oCYaGnFEw" name="perType" visibility="private" type="_LPKmwMqDEd6T2oCYaGnFEw">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FHtuEMqIEd6T2oCYaGnFEw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EQd9AMqIEd6T2oCYaGnFEw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_IZJCkMqIEd6T2oCYaGnFEw" name="perPointCut" visibility="private" type="_MjFTcMqIEd6T2oCYaGnFEw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eMc94MqIEd6T2oCYaGnFEw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_i1XCsMqIEd6T2oCYaGnFEw" name="declaredParents" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Generalization"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pA8bMMqIEd6T2oCYaGnFEw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oc7vMMqIEd6T2oCYaGnFEw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Ebr5EMqJEd6T2oCYaGnFEw" name="declaredImplements" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#InterfaceRealization"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HWTQEMqJEd6T2oCYaGnFEw" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_GrqXoMqJEd6T2oCYaGnFEw"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_RgOcEMr6Ed6WjYvlwxWqyA" name="precededBy" visibility="private" type="_eQ7ngMqDEd6T2oCYaGnFEw" association="_m0JPoMqMEd6T2oCYaGnFEw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VS3nQMr6Ed6WjYvlwxWqyA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_bZK3IMr6Ed6WjYvlwxWqyA" name="precedes" visibility="private" type="_eQ7ngMqDEd6T2oCYaGnFEw" association="_m0JPoMqMEd6T2oCYaGnFEw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eLLrwMr6Ed6WjYvlwxWqyA"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_MjFTcMqIEd6T2oCYaGnFEw" name="PointCut">
+    <ownedAttribute xmi:id="_Qn7o8sqIEd6T2oCYaGnFEw" name="base_StructuralFeature" association="_Qn7o8MqIEd6T2oCYaGnFEw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeature"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_0I4csMr7Ed6WjYvlwxWqyA" name="composite" visibility="private" type="_tcZzEMr6Ed6WjYvlwxWqyA" association="_CvEfcMr7Ed6WjYvlwxWqyA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CCbmcMr8Ed6WjYvlwxWqyA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-TZv8Mr7Ed6WjYvlwxWqyA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_H-sIsMssEd60_JOI_azNeQ" name="advice" visibility="private" type="_jcTw4MsrEd60_JOI_azNeQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K8HjIMssEd60_JOI_azNeQ" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J5bXEMssEd60_JOI_azNeQ"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_R5DvEMqHEd6T2oCYaGnFEw" name="Class_Aspect" memberEnd="_R5DvEcqHEd6T2oCYaGnFEw _R5EWIMqHEd6T2oCYaGnFEw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_R5DvEcqHEd6T2oCYaGnFEw" name="extension_Aspect" type="_eQ7ngMqDEd6T2oCYaGnFEw" aggregation="composite" association="_R5DvEMqHEd6T2oCYaGnFEw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Qn7o8MqIEd6T2oCYaGnFEw" name="StructuralFeature_PointCut" memberEnd="_Qn7o8cqIEd6T2oCYaGnFEw _Qn7o8sqIEd6T2oCYaGnFEw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Qn7o8cqIEd6T2oCYaGnFEw" name="extension_PointCut" type="_MjFTcMqIEd6T2oCYaGnFEw" aggregation="composite" association="_Qn7o8MqIEd6T2oCYaGnFEw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_m0JPoMqMEd6T2oCYaGnFEw" name="A_Aspect_Aspect" memberEnd="_RgOcEMr6Ed6WjYvlwxWqyA _bZK3IMr6Ed6WjYvlwxWqyA"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_tcZzEMr6Ed6WjYvlwxWqyA" name="CompositePointCut">
+    <generalization xmi:id="_7s8ggMr6Ed6WjYvlwxWqyA" general="_MjFTcMqIEd6T2oCYaGnFEw"/>
+    <ownedAttribute xmi:id="_2E5S4Mr6Ed6WjYvlwxWqyA" name="base_StructuralFeature" association="_2E2PkMr6Ed6WjYvlwxWqyA">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#StructuralFeature"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_HwE7MMr7Ed6WjYvlwxWqyA" name="composee" visibility="private" type="_MjFTcMqIEd6T2oCYaGnFEw" association="_CvEfcMr7Ed6WjYvlwxWqyA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PMsdwMr7Ed6WjYvlwxWqyA" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_O4tKwMr7Ed6WjYvlwxWqyA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_kFCloMr7Ed6WjYvlwxWqyA" name="compositionType" visibility="private" type="_POvFkMqBEd6T2oCYaGnFEw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_2E2PkMr6Ed6WjYvlwxWqyA" name="StructuralFeature_CompositePointCut" memberEnd="_2E4r0Mr6Ed6WjYvlwxWqyA _2E5S4Mr6Ed6WjYvlwxWqyA">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_2E4r0Mr6Ed6WjYvlwxWqyA" name="extension_CompositePointCut" type="_tcZzEMr6Ed6WjYvlwxWqyA" aggregation="composite" association="_2E2PkMr6Ed6WjYvlwxWqyA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CvEfcMr7Ed6WjYvlwxWqyA" name="A_CompositePointCut_PointCut" memberEnd="_HwE7MMr7Ed6WjYvlwxWqyA _0I4csMr7Ed6WjYvlwxWqyA"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_jcTw4MsrEd60_JOI_azNeQ" name="Advice">
+    <ownedAttribute xmi:id="_nZHksMsrEd60_JOI_azNeQ" name="base_BehavioralFeature" association="_nY_o4MsrEd60_JOI_azNeQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#BehavioralFeature"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_pZEDMMsrEd60_JOI_azNeQ" name="adviceExecution" visibility="private" type="_A0N8wMqBEd6T2oCYaGnFEw"/>
+    <ownedAttribute xmi:id="_4ykj0MsrEd60_JOI_azNeQ" name="pointCut" visibility="private" type="_MjFTcMqIEd6T2oCYaGnFEw"/>
+    <ownedAttribute xmi:id="_PZHvgOINEd63wL3ESafAKg" name="advisedElement" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#NamedElement"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WS644OINEd63wL3ESafAKg" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VJcvYOINEd63wL3ESafAKg"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_nY_o4MsrEd60_JOI_azNeQ" name="BehavioralFeature_Advice" memberEnd="_nZG9oMsrEd60_JOI_azNeQ _nZHksMsrEd60_JOI_azNeQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_nZG9oMsrEd60_JOI_azNeQ" name="extension_Advice" type="_jcTw4MsrEd60_JOI_azNeQ" aggregation="composite" association="_nY_o4MsrEd60_JOI_azNeQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1tMuUMsrEd60_JOI_azNeQ" name="A_Advice_PointCut"/>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_AMN1oMtSEd60_JOI_azNeQ" name="StaticCrossCuttingFeature">
+    <ownedAttribute xmi:id="_EyfdMctSEd60_JOI_azNeQ" name="base_Feature" association="_Eye2IMtSEd60_JOI_azNeQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Feature"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_HijxEMtSEd60_JOI_azNeQ" name="onType" visibility="private">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Type"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OBPEsMtSEd60_JOI_azNeQ" value="*"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Eye2IMtSEd60_JOI_azNeQ" name="Feature_StaticCrossCuttingFeature" memberEnd="_EyfdMMtSEd60_JOI_azNeQ _EyfdMctSEd60_JOI_azNeQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_EyfdMMtSEd60_JOI_azNeQ" name="extension_StaticCrossCuttingFeature" type="_AMN1oMtSEd60_JOI_azNeQ" aggregation="composite" association="_Eye2IMtSEd60_JOI_azNeQ"/>
+  </packagedElement>
+</uml:Profile>

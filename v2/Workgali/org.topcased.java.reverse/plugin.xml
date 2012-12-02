@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="org.topcased.java.reverse.actions"
+            objectClass="org.eclipse.jdt.core.IPackageFragment">
+         <action
+               class="org.topcased.java.reverse.internal.actions.UMLFromJavaAction"
+               enablesFor="1"
+               id="org.topcased.java.reverse.actions.UMLFromJavaAction"
+               label="UML from Java"/>
+      </objectContribution>
+      <objectContribution
+            adaptable="true"
+            id="org.topcased.java.reverse.actions2"
+            objectClass="org.eclipse.jdt.core.IJavaProject">
+         <action
+               class="org.topcased.java.reverse.internal.actions.UMLFromJavaAction"
+               enablesFor="1"
+               id="org.topcased.java.reverse.actions.UMLFromJavaAction"
+               label="UML from Java"/>
+      </objectContribution>
+   </extension>
+
+</plugin>

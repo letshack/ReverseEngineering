@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FDAF AspectJ To UML
+Bundle-SymbolicName: edu.utdallas.fdaf.aspectj.reverse;singleton:=true
+Bundle-Version: 1.0.0.0
+Bundle-Activator: edu.utdallas.fdaf.aspectj.reverse.internal.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.aspectj.weaver;bundle-version="1.6.5",
+ org.eclipse.core.resources;bundle-version="3.5.0",
+ org.eclipse.uml2tools;bundle-version="0.8.0",
+ org.eclipse.ajdt.core;bundle-version="2.0.0",
+ org.eclipse.uml2.uml;bundle-version="3.0.0",
+ org.eclipse.ui.ide;bundle-version="3.5.0",
+ org.topcased.java.reverse;bundle-version="2.5.0",
+ swipl.jpl;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-Vendor: UTD FDAF
+Export-Package: edu.utdallas.fdaf.aspectj.reverse
+Import-Package: org.eclipse.jdt.ui,
+ org.eclipse.uml2.diagram.clazz.part

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="edu.utdallas.fdaf.aspectj.reverse.AJ2UMLContrib"
+            objectClass="org.eclipse.jdt.core.IJavaElement">
+         <action
+               class="edu.utdallas.fdaf.aspectj.reverse.internal.actions.UMLFromAspectJAction"
+               enablesFor="+"
+               id="edu.utdallas.fdaf.aspectj.reverse.actions.UMLFromAspectJAction"
+               label="UML from AspectJ/Java">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
